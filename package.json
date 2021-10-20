@@ -1,0 +1,28 @@
+{
+  "name": "pvuproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -w",
+    "start": "nodemon server.js",
+    "webapp:dev": "concurrently 'npm:build' 'npm:start'"
+  },
+  "author": "fp",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-session": "^1.4.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.13",
+    "path": "^0.12.7",
+    "serve-favicon": "^2.5.0",
+    "supervisor": "^0.12.0",
+    "web3": "^1.6.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.3.0"
+  }
+}
